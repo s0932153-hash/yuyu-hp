@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yuyu | 成長を目指す企業のための伴走型集客パートナー</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #1a1a2e;
+    background: #fff;
+    line-height: 1.8;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 48px;
+    background: #fff;
+    border-bottom: 1px solid #e8eaf0;
+  }
+  .nav-logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a2e;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav-right a {
+    text-decoration: none;
+    color: #555;
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+  .nav-right a:hover { color: #3b5cf0; }
+  .nav-btn {
+    background: #3b5cf0;
+    color: #fff !important;
+    padding: 8px 18px !important;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  /* ===== HERO ===== */
+  .hero-wrap {
+    background: #eef2ff;
+    width: 100%;
+  }
+  .hero {
+    padding: 110px 80px 80px;
+    background: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    font-size: 34px;
+    font-weight: 900;
+    color: #1a1a2e;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .hero-sub {
+    font-size: 14px;
+    color: #555;
+    line-height: 2;
+    margin-bottom: 36px;
+  }
+  .hero-btns { display: flex; gap: 14px; align-items: center; }
+  .btn-blue {
+    background: #3b5cf0;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+  }
+  .btn-outline {
+    background: #fff;
+    color: #1a1a2e;
+    padding: 11px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1.5px solid #bbb;
+    display: inline-block;
+  }
+  .hero-photo {
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #c8d4f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8898cc;
+    font-size: 14px;
+  }
+
+  /* ===== COMMON ===== */
+  .sec-white { background: #fff; padding: 72px 48px; }
+  .sec-blue  { background: #eef2ff; padding: 72px 48px; }
+  .inner     { max-width: 800px; margin: 0 auto; }
+  .inner-w   { max-width: 920px; margin: 0 auto; }
+  .sec-title {
+    text-align: center;
+    font-size: 19px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 44px;
+  }
+
+  /* ===== WORRIES ===== */
+  .worries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    text-align: center;
+  }
+  .worry-icon { font-size: 44px; margin-bottom: 14px; display: block; }
+  .worry-item p { font-size: 14px; color: #333; line-height: 1.7; font-weight: 500; }
+
+  /* ===== PYRAMID ===== */
+  .pyramid-svg-wrap { width: 360px; margin: 0 auto 20px; }
+  .pyramid-svg-wrap svg { width: 100%; }
+  .pyramid-caption { text-align: center; font-size: 14px; color: #555; line-height: 2; }
+
+  /* ===== ABOUT ===== */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .about-text h2 { font-size: 19px; font-weight: 700; margin-bottom: 20px; }
+  .about-text p  { font-size: 14px; color: #444; line-height: 2.1; margin-bottom: 14px; }
+  .about-text p strong { font-weight: 700; color: #1a1a2e; }
+  .about-photo {
+    width: 100%; aspect-ratio: 3/4;
+    border-radius: 8px;
+    background: #c8d4f0;
+    display: flex; align-items: center; justify-content: center;
+    color: #8898cc; font-size: 14px;
+  }
+
+  /* ===== SERVICES ===== */
+  .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .svc-card {
+    background: #fff;
+    border: 1px solid #dde2f0;
+    border-radius: 8px;
+    padding: 26px 22px;
+  }
+  .svc-card .num { font-size: 12px; color: #666; margin-bottom: 4px; }
+  .svc-card h3 { font-size: 14px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; line-height: 1.5; }
+  .svc-card p { font-size: 13px; color: #555; line-height: 1.9; }
+
+  /* ===== STRENGTHS ===== */
+  .str-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 14px; max-width: 740px; margin: 0 auto 44px;
+  }
+  .str-card { border-radius: 8px; padding: 28px 24px; }
+  .str-card.yuyu   { background: #cceaf7; }
+  .str-card.others { background: #e0d0f5; }
+  .str-head { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+  .str-head .ico { font-size: 20px; }
+  .str-head h3 { font-size: 14px; font-weight: 700; color: #1a1a2e; }
+  .str-card ul { list-style: none; }
+  .str-card ul li { font-size: 14px; color: #333; padding: 3px 0; }
+  .str-card ul li::before { content: '・'; }
+
+  .str-body { max-width: 740px; margin: 0 auto; text-align: center; }
+  .str-body p { font-size: 15px; color: #444; line-height: 2.2; margin-bottom: 2px; }
+  .str-body p.bold { font-weight: 700; color: #1a1a2e; }
+
+  /* ===== FLOW ===== */
+  .flow-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+  .flow-step { margin-bottom: 44px; }
+  .flow-step h3 { font-size: 15px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+  .flow-step p  { font-size: 14px; color: #555; line-height: 2; }
+  .flow-note { font-size: 15px; font-weight: 500; color: #1a1a2e; margin-top: 8px; }
+
+  /* ===== CTA ===== */
+  .cta-wrap { background: #fff; padding: 80px 48px; text-align: center; }
+  .cta-wrap h2 { font-size: 19px; font-weight: 700; color: #1a1a2e; margin-bottom: 24px; }
+  .cta-wrap p  { font-size: 15px; color: #444; line-height: 2.2; margin-bottom: 4px; }
+  .btn-cta {
+    display: inline-block; margin-top: 32px;
+    background: #3b5cf0; color: #fff;
+    padding: 14px 44px; border-radius: 4px;
+    text-decoration: none; font-size: 15px; font-weight: 700;
+  }
+  .cta-sub { display: block; margin-top: 14px; font-size: 13px; color: #888; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #1a1a2e; color: rgba(255,255,255,0.45);
+    text-align: center; padding: 32px 48px; font-size: 12px;
+  }
+  .f-logo {
+    font-size: 18px; font-weight: 700; color: rgba(255,255,255,0.8);
+    text-decoration: none; display: block; margin-bottom: 10px;
+  }
+  footer ul { display: flex; justify-content: center; gap: 24px; list-style: none; margin-bottom: 14px; }
+  footer ul a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; }
+  footer ul a:hover { color: #fff; }
+
+  /* Fade */
+  .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-right a:not(.nav-btn) { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 88px 24px 56px; gap: 28px; }
+    .hero-photo { display: none; }
+    .hero h1 { font-size: 24px; }
+    .sec-white, .sec-blue, .cta-wrap { padding: 56px 24px; }
+    .worries-grid, .svc-grid, .str-grid, .about-grid { grid-template-columns: 1fr; }
+    .about-photo { display: none; }
+    .pyramid-svg-wrap { width: 270px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">yuyu</a>
+  <div class="nav-right">
+    <a href="about.html">yuyuについて</a>
+    <a href="strengths.html">yuyuの強み</a>
+    <a href="services.html">サービス</a>
+    <a href="flow.html">制作の流れ</a>
+    <a href="contact.html" class="nav-btn">無料相談はこちら</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div style="padding-top:64px;">
+  <div class="hero-wrap">
+    <div class="hero">
+      <div class="fade-up">
+        <h1>成長を目指す企業のための<br>伴走型集客パートナー</h1>
+        <p class="hero-sub">あなたのパートナーとして<br>戦略設計から運用まで一貫してサポートします。</p>
+        <div class="hero-btns">
+          <a href="contact.html" class="btn-blue">無料相談はこちら</a>
+          <a href="services.html" class="btn-outline">サービスを見る</a>
+        </div>
+      </div>
+      <div class="hero-photo fade-up"><img src="hero.jpeg" alt="ミーティング風景" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- WORRIES -->
+<div class="sec-white">
+  <div class="inner">
+    <p class="sec-title fade-up">こんなお悩みありませんか？</p>
+    <div class="worries-grid">
+      <div class="worry-item fade-up">
+        <img src="icon1.png" alt="SNSアイコン" style="width:64px;height:64px;object-fit:contain;margin-bottom:14px;">
+        <p>何を発信すれば<br>いいのか分からない</p>
+      </div>
+      <div class="worry-item fade-up">
+        <img src="icon2.png" alt="グラフアイコン" style="width:64px;height:64px;object-fit:contain;margin-bottom:14px;">
+        <p>SNSやWEBを作っても<br>反応がない</p>
+      </div>
+      <div class="worry-item fade-up">
+        <img src="icon3.png" alt="歯車アイコン" style="width:64px;height:64px;object-fit:contain;margin-bottom:14px;">
+        <p>集客につながる発信の<br>方法が分からない</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PYRAMID -->
+<div class="sec-blue">
+  <div class="inner">
+    <p class="sec-title fade-up">発信を"仕組み"に変える３つの設計</p>
+    <div class="pyramid-svg-wrap fade-up">
+      <svg viewBox="0 0 360 210" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="180,8 244,82 116,82" fill="#c8d5f5"/>
+        <polygon points="112,88 248,88 278,156 82,156" fill="#aec0ee"/>
+        <polygon points="78,162 282,162 322,210 38,210" fill="#96ade6"/>
+        <text x="180" y="46" text-anchor="middle" font-size="9.5" fill="#3b5cf0" font-family="sans-serif">01.</text>
+        <text x="180" y="60" text-anchor="middle" font-size="11" fill="#3b5cf0" font-family="sans-serif" font-weight="500">誰に届けたいのか</text>
+        <text x="180" y="114" text-anchor="middle" font-size="9.5" fill="#3b5cf0" font-family="sans-serif">02.</text>
+        <text x="180" y="130" text-anchor="middle" font-size="10.5" fill="#3b5cf0" font-family="sans-serif" font-weight="500">見た人にどんな行動をしてほしいのか</text>
+        <text x="180" y="178" text-anchor="middle" font-size="9.5" fill="#3b5cf0" font-family="sans-serif">03.</text>
+        <text x="180" y="194" text-anchor="middle" font-size="11" fill="#3b5cf0" font-family="sans-serif" font-weight="500">何を強みとして伝えるのか</text>
+      </svg>
+    </div>
+    <p class="pyramid-caption fade-up">土台から整えることで、<br>発信は"なんとなく"から"戦略"に変わります。</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="sec-white">
+  <div class="about-grid fade-up">
+    <div class="about-text">
+      <h2>yuyuについて</h2>
+      <p>「とりあえず投稿する」「とりあえず作る」<br>そんな発信から抜け出したい企業さまへ。<br>強みや想いを整理し、<br>届けたい相手と目的を明確にすることで、<br>成果につながる発信の"土台"を一緒につくります。<br>制作だけを行うのではなく、<br>企業のパートナーとして伴走しながら、<br>発信を"仕組み"へと育てていきます。</p>
+      <p><strong>単発の制作ではなく、<br>事業の成長に貢献する発信設計を支援しています。</strong></p>
+    </div>
+    <div class="about-photo"><img src="about.jpeg" alt="作業中の女性" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="sec-blue">
+  <div class="inner-w">
+    <p class="sec-title fade-up">サポート内容</p>
+    <div class="svc-grid">
+      <div class="svc-card fade-up">
+        <p class="num">① 魅力の整理</p>
+        <h3>成果につながる発信の軸を設計します</h3>
+        <p>強み・特徴・想いを整理し、誰に・何を・どう届けるかを明確にします。発信の軸を定める工程です。</p>
+      </div>
+      <div class="svc-card fade-up">
+        <p class="num">② SNS運用</p>
+        <h3>集客につながる導線を構築します</h3>
+        <p>方向性に沿った投稿設計を行い、目的につながる導線をつくります。"なんとなく投稿"から脱却します。</p>
+      </div>
+      <div class="svc-card fade-up">
+        <p class="num">③ 動画制作</p>
+        <h3>信頼を生む動画環境を設計します</h3>
+        <p>感覚的な動画ではなく、届けたい相手を意識した構成で興味・信頼につなげます。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STRENGTHS -->
+<div class="sec-white">
+  <div class="inner-w">
+    <p class="sec-title fade-up">yuyuの強み</p>
+    <div class="str-grid">
+      <div class="str-card yuyu fade-up">
+        <div class="str-head">
+          <img src="icon_yuyu.png" style="width:28px;height:28px;object-fit:contain;">
+          <h3>yuyuの場合</h3>
+        </div>
+        <ul>
+          <li>発信の軸から設計</li>
+          <li>事業目線で伴走</li>
+          <li>導線まで設計</li>
+          <li>成長を見据えた支援</li>
+        </ul>
+      </div>
+      <div class="str-card others fade-up">
+        <div class="str-head">
+          <img src="icon_other.png" style="width:28px;height:28px;object-fit:contain;">
+          <h3>制作会社A</h3>
+        </div>
+        <ul>
+          <li>UX・ユーザー視点を重視</li>
+          <li>分析に基づいた設計</li>
+          <li>制作物の完成度を重視</li>
+          <li>プロジェクト単位の支援</li>
+        </ul>
+      </div>
+    </div>
+    <div class="str-body fade-up">
+      <p>発信や制作は、事業の成長につなげるための手段だと考えています。</p>
+      <p>そのため、デザインや投稿を行う前に、誰に・何を・どう届けるかを設計します。</p>
+      <p>制作して終わりではなく、<br>運用までを見据えた導線設計を行い、成果につながる仕組みへと育てていきます。</p>
+      <p class="bold">作る人ではなく、事業のパートナーとして伴走します。</p>
+      <p>単発の制作ではなく、<br>事業の成長に貢献する発信設計を支援しています。</p>
+    </div>
+  </div>
+</div>
+
+<!-- FLOW -->
+<div class="sec-blue">
+  <p class="sec-title fade-up">制作の流れ</p>
+  <div class="flow-inner">
+    <div class="flow-step fade-up">
+      <h3>① ヒアリング・現状整理</h3>
+      <p>まずは事業内容や課題、目標を丁寧にヒアリングします。<br>「何を作るか」ではなく「何を目指すか」から整理します。</p>
+    </div>
+    <div class="flow-step fade-up">
+      <h3>② 発信設計・方向性決定</h3>
+      <p>誰に・何を・どう届けるのかを明確にし、<br>成果につながる導線を設計します。</p>
+    </div>
+    <div class="flow-step fade-up">
+      <h3>③ 制作・実装</h3>
+      <p>設計内容に基づき、WEB・SNS・動画などを制作します。</p>
+    </div>
+    <div class="flow-step fade-up">
+      <h3>④ 公開・運用サポート</h3>
+      <p>公開後も必要に応じて改善・運用を行い、<br>継続的に成果につながる状態を目指します。</p>
+    </div>
+    <p class="flow-note fade-up">方向性が決まっていない段階からでもご相談いただけます。</p>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-wrap">
+  <h2 class="fade-up">まずはお気軽にご相談ください</h2>
+  <p class="fade-up">方向性がまだ固まっていない段階でも問題ありません。</p>
+  <p class="fade-up">何を発信すればよいか分からない状態からでも、<br>目的や状況を丁寧にお伺いし、<br>集客につながる最適な形を一緒に整理します。</p>
+  <p class="fade-up">パートナーとして寄り添いながら、<br>継続的に成果につながる発信をサポートします。</p>
+  <a href="contact.html" class="btn-cta fade-up">発信設計について相談する</a>
+  <span class="cta-sub fade-up">お問い合わせ・ご相談は無料です<br>お気軽にご連絡ください。</span>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html" class="f-logo">yuyu</a>
+  <ul>
+    <li><a href="about.html">yuyuについて</a></li>
+    <li><a href="strengths.html">yuyuの強み</a></li>
+    <li><a href="services.html">サービス</a></li>
+    <li><a href="flow.html">制作の流れ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+  </ul>
+  <p>© 2024 yuyu. All rights reserved.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

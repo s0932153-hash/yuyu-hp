@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yuyuについて | yuyu</title>
+<link rel="stylesheet" href="common.css">
+<style>
+/* HERO BLOCK - 縦並び */
+.about-hero {
+  padding: 100px 48px 0;
+  background: #fff;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.about-hero-text h1 {
+  font-size: 20px; font-weight: 700; color: #1a1a2e;
+  margin-bottom: 6px;
+}
+.about-hero-text .tagline {
+  font-size: 13px; color: #666; margin-bottom: 28px;
+}
+.about-hero-photo {
+  width: 100%; aspect-ratio: 16/9; border-radius: 10px;
+  overflow: hidden; margin-bottom: 40px;
+}
+.about-hero-photo img { width:100%; height:100%; object-fit:cover; }
+
+/* TEXT BLOCKS */
+.text-block {
+  background: #eef2ff;
+  border-radius: 6px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.9;
+}
+.text-block .block-num {
+  font-size: 12px; color: #3b5cf0; font-weight: 700;
+  margin-bottom: 8px; display: block;
+}
+.text-block p { font-size: 14px; color: #444; line-height: 1.9; }
+
+/* STANCE SECTION */
+.stance-wrap {
+  max-width: 760px; margin: 0 auto;
+}
+
+/* IDEAL */
+.ideal-list {
+  background: #eef2ff; border-radius: 6px; padding: 20px 24px;
+  margin-bottom: 14px;
+}
+.ideal-list ul { list-style: none; }
+.ideal-list ul li {
+  font-size: 14px; color: #333; padding: 4px 0;
+}
+.ideal-list ul li::before { content: '✓ '; color: #3b5cf0; font-weight: 700; }
+
+/* CTA */
+.cta-wrap { text-align: center; padding: 60px 48px; background: #fff; }
+.cta-wrap p { font-size: 15px; color: #555; line-height: 2.2; margin-bottom: 6px; }
+.cta-note { display: block; margin-top: 14px; font-size: 13px; color: #888; }
+
+@media (max-width: 768px) {
+  .about-hero { grid-template-columns: 1fr; padding: 88px 24px 0; }
+  .about-hero-photo { display: none; }
+  .cta-wrap { padding: 56px 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">yuyu</a>
+  <div class="nav-right">
+    <a href="index.html">TOP</a>
+    <a href="about.html" class="active">yuyuについて</a>
+    <a href="strengths.html">yuyuの強み</a>
+    <a href="services.html">サービス</a>
+    <a href="flow.html">制作の流れ</a>
+    <a href="contact.html" class="nav-btn">無料相談はこちら</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div style="padding-top:64px;">
+  <div class="about-hero">
+    <div class="about-hero-text fade-up">
+      <h1>yuyuについて</h1>
+      <p class="tagline">事業の成長に貢献する発信設計を支援しています</p>
+    </div>
+    <div class="about-hero-photo fade-up">
+      <img src="about_page.png" alt="デスク作業風景">
+    </div>
+    <div class="fade-up">
+      <!-- Block 1 -->
+      <div class="text-block">
+        <span class="block-num">① 想い</span>
+        <p>事業を成長させるためには、<br>"なんとなくの発信"から抜け出して、<br>ただ作るのではなく、企業さまの強みや想いを整理し、<br>それが、私の大切にしている変革です。</p>
+      </div>
+      <!-- Block 2 -->
+      <div class="text-block">
+        <span class="block-num">② なぜこの仕事をしているのか</span>
+        <p>これまで多くの発信を見てきて、「本来はもっと力があるのに、伝わっていない」と感じる場面が何度もありました。<br>強みや想いはあるのに、整理されていないだけで伝わらない。<br>その問題、とてもよいと感じたことが、発信設計に向き合うきっかけです。</p>
+      </div>
+      <!-- Block 3 -->
+      <div class="text-block">
+        <span class="block-num">③ 私のスタンス</span>
+        <p>私は、制作だけを行うのではなく、まずは丁寧に事業を聞きます。<br>事業の背景や状況を理解し、誰に・何を・どう届けるかを一緒に考えます。<br>事業の制作を成長に貢献する発信設計を支援していきます。<br>作る人ではなく、事業のパートナーとして伴走します。</p>
+      </div>
+      <!-- Block 4 -->
+      <div class="text-block">
+        <span class="block-num">④ 相性の良い企業さま</span>
+        <div class="ideal-list" style="background:transparent; padding:0; margin:0;">
+          <ul>
+            <li>発信を強化したいが方向性が定まっていない</li>
+            <li>制作だけでなく、設計から相談したい</li>
+            <li>継続的な集客の仕組みを作りたい</li>
+          </ul>
+        </div>
+        <p style="margin-top:10px;">そのような企業さまと、じっくりお付き合いしたいと考えています。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-wrap sec-blue" style="margin-top:60px;">
+  <div class="inner fade-up">
+    <p>方向性が決まっていない段階からでも大丈夫です。<br>まずはお気軽に相談しながら、<br>今の状況に合った進め方をご提案します。</p>
+    <a href="contact.html" class="btn-blue" style="margin-top:28px; display:inline-block;">発信設計について相談する</a>
+    <span class="cta-note">お問い合わせ・ご相談は無料です</span>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="f-logo">yuyu</a>
+  <ul>
+    <li><a href="about.html">yuyuについて</a></li>
+    <li><a href="services.html">サービス</a></li>
+    <li><a href="flow.html">制作の流れ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+  </ul>
+  <p>© 2024 yuyu. All rights reserved.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:0.08});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

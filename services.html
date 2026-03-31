@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サービス内容 | yuyu</title>
+<link rel="stylesheet" href="common.css">
+<style>
+.svc-section { background: #eef2ff; padding: 72px 48px; }
+.svc-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 20px; max-width: 700px; margin: 0 auto 40px;
+}
+.svc-card { background: #d8d0f0; border-radius: 8px; overflow: hidden; }
+.svc-card-icon {
+  background: #fff; padding: 28px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 52px;
+}
+.svc-card-body { padding: 20px 18px; }
+.svc-card h3 { font-size: 15px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+.svc-card .svc-desc { font-size: 13px; color: #444; line-height: 1.8; margin-bottom: 12px; }
+.svc-card ul { list-style: none; }
+.svc-card ul li { font-size: 13px; color: #333; padding: 2px 0; }
+.svc-card ul li::before { content: '・'; }
+
+.svc-tagline {
+  text-align: center; font-size: 16px; font-weight: 700;
+  color: #1a1a2e; margin-top: 16px;
+}
+
+.cta-wrap { text-align: center; padding: 60px 48px; background: #fff; }
+.cta-wrap p { font-size: 15px; color: #555; line-height: 2.2; margin-bottom: 6px; }
+.cta-note { display: block; margin-top: 14px; font-size: 13px; color: #888; }
+
+@media (max-width: 768px) {
+  .svc-grid { grid-template-columns: 1fr; }
+  .svc-section, .cta-wrap { padding: 56px 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">yuyu</a>
+  <div class="nav-right">
+    <a href="index.html">TOP</a>
+    <a href="about.html">yuyuについて</a>
+    <a href="strengths.html">yuyuの強み</a>
+    <a href="services.html" class="active">サービス</a>
+    <a href="flow.html">制作の流れ</a>
+    <a href="contact.html" class="nav-btn">無料相談はこちら</a>
+  </div>
+</nav>
+
+<div style="padding-top:64px;">
+<div class="svc-section">
+  <p class="sec-title fade-up">サービス内容</p>
+  <p class="sec-sub fade-up">-設計から実行まで一貫して支援します-</p>
+  <div class="svc-grid">
+    <div class="svc-card fade-up">
+      <div class="svc-card-icon"><img src="svc_icon1.png" style="width:60px;height:60px;object-fit:contain;"></div>
+      <div class="svc-card-body">
+        <h3>SNS運用設計</h3>
+        <p class="svc-desc">方向性を整理し、目的につながる投稿設計をします</p>
+        <ul>
+          <li>投稿企画設計</li>
+          <li>導線設計</li>
+          <li>運用サポート</li>
+        </ul>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-card-icon"><img src="svc_icon2.jpeg" style="width:60px;height:60px;object-fit:contain;"></div>
+      <div class="svc-card-body">
+        <h3>動画制作</h3>
+        <p class="svc-desc">伝える目的を明確にした動画制作を行います</p>
+        <ul>
+          <li>構成設計</li>
+          <li>ショート動画制作</li>
+          <li>企業紹介動画</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="svc-tagline fade-up">制作はゴールではなく、成果につなげるための手段です。</p>
+</div>
+
+<div class="cta-wrap fade-up">
+  <p>方向性が決まっていない段階からでも、ご相談いただけます。<br>まずはお気軽にご連絡ください。</p>
+  <a href="contact.html" class="btn-blue" style="margin-top:24px; display:inline-block;">発信設計について相談する</a>
+  <span class="cta-note">お問い合わせ・ご相談は無料です</span>
+</div>
+</div>
+
+<footer>
+  <a href="index.html" class="f-logo">yuyu</a>
+  <ul>
+    <li><a href="about.html">yuyuについて</a></li>
+    <li><a href="strengths.html">yuyuの強み</a></li>
+    <li><a href="services.html">サービス</a></li>
+    <li><a href="flow.html">制作の流れ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+  </ul>
+  <p>© 2024 yuyu. All rights reserved.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:0.08});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

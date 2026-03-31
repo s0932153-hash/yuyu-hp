@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>制作の流れ | yuyu</title>
+<link rel="stylesheet" href="common.css">
+<style>
+.flow-section { background: #eef2ff; padding: 72px 48px; }
+.flow-inner { max-width: 560px; margin: 0 auto; }
+
+/* Top text */
+.flow-intro { text-align: center; margin-bottom: 32px; }
+.flow-intro p { font-size: 14px; color: #444; line-height: 2; }
+.flow-intro p.bold { font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
+
+/* Photo */
+.flow-photo {
+  width: 100%; max-width: 480px;
+  aspect-ratio: 4/3; border-radius: 8px;
+  background: #b8cce8;
+  display: flex; align-items: center; justify-content: center;
+  color: #7898bb; font-size: 14px;
+  margin: 0 auto 36px;
+  overflow: hidden;
+}
+.flow-photo img { width:100%; height:100%; object-fit:cover; }
+
+/* STEP cards */
+.step-card {
+  background: #ccd2f0;
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin-bottom: 12px;
+}
+.step-badge {
+  display: inline-block;
+  background: #3b5cf0; color: #fff;
+  font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  padding: 3px 12px; border-radius: 20px;
+  margin-bottom: 10px;
+}
+.step-card h3 { font-size: 15px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+.step-card p  { font-size: 13px; color: #444; line-height: 1.9; }
+
+/* Bottom CTA text */
+.flow-cta-text { text-align: center; margin-top: 36px; }
+.flow-cta-text p { font-size: 14px; color: #444; line-height: 2; margin-bottom: 6px; }
+
+.cta-note { display: block; margin-top: 14px; font-size: 13px; color: #888; }
+
+@media (max-width: 768px) {
+  .flow-section { padding: 56px 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">yuyu</a>
+  <div class="nav-right">
+    <a href="index.html">TOP</a>
+    <a href="about.html">yuyuについて</a>
+    <a href="strengths.html">yuyuの強み</a>
+    <a href="services.html">サービス</a>
+    <a href="flow.html" class="active">制作の流れ</a>
+    <a href="contact.html" class="nav-btn">無料相談はこちら</a>
+  </div>
+</nav>
+
+<div style="padding-top:64px;">
+<div class="flow-section">
+  <div class="flow-inner">
+    <p class="sec-title fade-up">制作の流れ</p>
+
+    <div class="flow-intro fade-up">
+      <p class="bold">作る人ではなく、事業のパートナーとして伴走します。</p>
+      <p>単発の制作ではなく、<br>事業の成長に貢献する発信設計を支援しています。</p>
+    </div>
+
+    <!-- Photo -->
+    <div class="flow-photo fade-up"><img src="flow_photo.png" alt="制作の流れ" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div>
+
+    <!-- STEP 01 -->
+    <div class="step-card fade-up">
+      <span class="step-badge">STEP 01</span>
+      <h3>ヒアリング・現状整理</h3>
+      <p>まずは事業内容や課題、目指している方向性を丁寧にヒアリングします。「何を作るか」ではなく、「何を目指すか」から整理します。</p>
+    </div>
+
+    <!-- STEP 02 -->
+    <div class="step-card fade-up">
+      <span class="step-badge">STEP 02</span>
+      <h3>発信設計・方向性決定</h3>
+      <p>誰に・何を・どう届けるかを明確にし、成果につながる発信の軸と方向性を設計します。</p>
+    </div>
+
+    <!-- STEP 03 -->
+    <div class="step-card fade-up">
+      <span class="step-badge">STEP 03</span>
+      <h3>制作・実装</h3>
+      <p>設計した内容をもとに、SNS運用・動画などを制作します。</p>
+    </div>
+
+    <!-- STEP 04 -->
+    <div class="step-card fade-up">
+      <span class="step-badge">STEP 04</span>
+      <h3>公開・運用サポート</h3>
+      <p>公開後も必要に応じて改善や運用を行い、継続的に成果につながる状態を目指します。</p>
+    </div>
+
+    <!-- CTA text -->
+    <div class="flow-cta-text fade-up">
+      <p>方向性が決まっていない段階からでも、ご相談いただけます。<br>まずはお話を伺いながら、<br>今の状況に合った進め方をご提案します。</p>
+      <a href="contact.html" class="btn-blue" style="margin-top:24px; display:inline-block;">発信設計について相談する</a>
+      <span class="cta-note">お問い合わせ・ご相談は無料です</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer>
+  <a href="index.html" class="f-logo">yuyu</a>
+  <ul>
+    <li><a href="about.html">yuyuについて</a></li>
+    <li><a href="services.html">サービス</a></li>
+    <li><a href="flow.html">制作の流れ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+  </ul>
+  <p>© 2024 yuyu. All rights reserved.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:0.08});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

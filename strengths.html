@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yuyuの強み | yuyu</title>
+<link rel="stylesheet" href="common.css">
+<style>
+.str-section { background: #fff; padding: 72px 48px; }
+
+.str-intro { max-width: 760px; margin: 0 auto 48px; text-align: center; }
+.str-intro p { font-size: 14px; color: #555; line-height: 2; margin-bottom: 4px; }
+
+/* Compare cards */
+.compare-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px; max-width: 760px; margin: 0 auto 48px;
+}
+.compare-card { border-radius: 8px; padding: 28px 24px; }
+.compare-card.yuyu   { background: #cceaf7; }
+.compare-card.others { background: #e0d0f5; }
+.c-head { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.c-head .ico { font-size: 20px; }
+.c-head h3 { font-size: 14px; font-weight: 700; color: #1a1a2e; }
+.compare-card ul { list-style: none; }
+.compare-card ul li { font-size: 14px; color: #333; padding: 3px 0; }
+.compare-card ul li::before { content: '・'; }
+
+/* 4 strength cards */
+.str-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px; max-width: 760px; margin: 0 auto 48px;
+}
+.str-card { background: #eef2ff; border-radius: 8px; padding: 28px 26px; }
+.str-card h3 { font-size: 15px; font-weight: 700; color: #1a1a2e; margin-bottom: 12px; }
+.str-card p  { font-size: 13px; color: #444; line-height: 1.9; }
+.str-card ul { list-style: none; margin-top: 10px; }
+.str-card ul li { font-size: 13px; color: #444; padding: 2px 0; }
+.str-card ul li::before { content: '・'; }
+
+/* Body text */
+.str-body { max-width: 760px; margin: 0 auto 48px; text-align: center; }
+.str-body p { font-size: 15px; color: #444; line-height: 2.2; margin-bottom: 4px; }
+.str-body p.bold { font-weight: 700; color: #1a1a2e; }
+
+/* Partner block */
+.partner-block {
+  background: #eef2ff; border-radius: 8px;
+  padding: 40px 36px; max-width: 760px;
+  margin: 0 auto; text-align: center;
+}
+.partner-block h2 { font-size: 18px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; }
+.partner-block p  { font-size: 14px; color: #555; line-height: 2; }
+
+.cta-wrap { text-align: center; padding: 60px 48px; background: #fff; }
+.cta-note { display: block; margin-top: 14px; font-size: 13px; color: #888; }
+
+@media (max-width: 768px) {
+  .compare-grid, .str-grid { grid-template-columns: 1fr; }
+  .str-section, .cta-wrap { padding: 56px 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">yuyu</a>
+  <div class="nav-right">
+    <a href="index.html">TOP</a>
+    <a href="about.html">yuyuについて</a>
+    <a href="strengths.html" class="active">yuyuの強み</a>
+    <a href="services.html">サービス</a>
+    <a href="flow.html">制作の流れ</a>
+    <a href="contact.html" class="nav-btn">無料相談はこちら</a>
+  </div>
+</nav>
+
+<div style="padding-top:64px;">
+<div class="str-section">
+  <p class="sec-title fade-up">yuyuの強み</p>
+
+  <div class="str-intro fade-up">
+    <p>制作は、ゴールではありません。</p>
+    <p>発信や制作は、事業の成長につなげるための手段だと考えています。</p>
+    <p>デザインがきれいでも、投稿が続いても、成果につながらなければ意味がありません。</p>
+    <p>yuyuでは、「作る前」に考えることを何より大切にしています。</p>
+  </div>
+
+  <!-- Compare -->
+  <div class="compare-grid">
+    <div class="compare-card yuyu fade-up">
+      <div class="c-head">
+        <img src="icon_yuyu.png" style="width:28px;height:28px;object-fit:contain;">
+        <h3>yuyuの場合</h3>
+      </div>
+      <ul>
+        <li>発信の軸から設計</li>
+        <li>事業目線で伴走</li>
+        <li>導線まで設計</li>
+        <li>成長を見据えた支援</li>
+      </ul>
+    </div>
+    <div class="compare-card others fade-up">
+      <div class="c-head">
+        <img src="icon_other.png" style="width:28px;height:28px;object-fit:contain;">
+        <h3>制作会社A</h3>
+      </div>
+      <ul>
+        <li>UX・ユーザー視点を重視</li>
+        <li>分析に基づいた設計</li>
+        <li>制作物の完成度を重視</li>
+        <li>プロジェクト単位の支援</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 4 cards -->
+  <div class="str-grid">
+    <div class="str-card fade-up">
+      <h3>発信の軸から、設計します</h3>
+      <p>多くの場合、「何を投稿するか」「どんなデザインにするか」から発信は始まってしまいます。yuyuでは、まず最初に誰に・何を・どう届けるのかを整理します。</p>
+      <ul>
+        <li>誰に向けた発信なのか</li>
+        <li>どんな価値を届けたいのか</li>
+        <li>どんな行動につなげたいのか</li>
+      </ul>
+      <p style="margin-top:10px;">この"軸"を決めることで、発信は「なんとなく」から「意味のあるもの」に変わります。</p>
+    </div>
+    <div class="str-card fade-up">
+      <h3>事業目線で、伴走します</h3>
+      <p>yuyuは、制作だけを行う外注先ではありません。事業の背景や状況を理解し、一緒に考え、一緒に悩みながら進めるパートナーでありたいと考えています。</p>
+      <ul>
+        <li>今、何が課題なのか</li>
+        <li>どこを目指しているのか</li>
+        <li>どの手段が本当に合っているのか</li>
+      </ul>
+      <p style="margin-top:10px;">面に見える発信だけでなく、その奥にある事業全体を見ながら支援します。</p>
+    </div>
+    <div class="str-card fade-up">
+      <h3>導線まで見据えた設計</h3>
+      <p>yuyuが大切にしているのは、「発信の先」まで考えることです。</p>
+      <ul>
+        <li>投稿を見た人が、次に何をするのか</li>
+        <li>サイトを見た人が、どこで決断するのか</li>
+        <li>動画を見た人が、どう印象を持つのか</li>
+      </ul>
+      <p style="margin-top:10px;">SNS・WEB・動画をバラバラに作るのではなく、ひとつの流れとして設計します。</p>
+    </div>
+    <div class="str-card fade-up">
+      <h3>成長を見据えた支援</h3>
+      <p>制作して終わりではなく、運用や改善まで見据えた設計を行います。</p>
+      <p style="margin-top:8px;">事業は、状況によって変わっていくもの。だからこそ、長く育てていける発信の仕組みを大切にしています。</p>
+    </div>
+  </div>
+
+  <!-- Body text -->
+  <div class="str-body fade-up">
+    <p>発信や制作は、事業の成長につなげるための手段だと考えています。</p>
+    <p>そのため、デザインや投稿を行う前に、誰に・何を・どう届けるかを設計します。</p>
+    <p>制作して終わりではなく、<br>運用までを見据えた導線設計を行い、成果につながる仕組みへと育てていきます。</p>
+    <p class="bold">作る人ではなく、事業のパートナーとして伴走します。</p>
+    <p>単発の制作ではなく、<br>事業の成長に貢献する発信設計を支援しています。</p>
+  </div>
+
+  <!-- Partner block -->
+  <div class="partner-block fade-up">
+    <h2>作る人ではなく、事業のパートナーとして</h2>
+    <p>yuyuは、「制作をする人」ではなく<br>事業のパートナーとして伴走する存在でありたいと考えています。<br>単発の制作ではなく、事業の成長に貢献する発信設計を支援しています。</p>
+  </div>
+</div>
+
+<div class="cta-wrap sec-blue fade-up">
+  <p style="font-size:15px; color:#555; line-height:2.2;">方向性が決まっていない段階からでも、ご相談いただけます。<br>まずはお気軽にご連絡ください。</p>
+  <a href="contact.html" class="btn-blue" style="margin-top:24px; display:inline-block;">発信設計について相談する</a>
+  <span class="cta-note">お問い合わせ・ご相談は無料です</span>
+</div>
+</div>
+
+<footer>
+  <a href="index.html" class="f-logo">yuyu</a>
+  <ul>
+    <li><a href="about.html">yuyuについて</a></li>
+    <li><a href="strengths.html">yuyuの強み</a></li>
+    <li><a href="services.html">サービス</a></li>
+    <li><a href="flow.html">制作の流れ</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+  </ul>
+  <p>© 2024 yuyu. All rights reserved.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:0.08});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
