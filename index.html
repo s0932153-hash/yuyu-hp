@@ -262,8 +262,23 @@
     <a href="services.html">サービス</a>
     <a href="flow.html">制作の流れ</a>
     <a href="contact.html" class="nav-btn">無料相談はこちら</a>
-  </div>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+</div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="about.html">yuyuについて</a>
+    <a href="strengths.html">yuyuの強み</a>
+    <a href="services.html">サービス</a>
+    <a href="flow.html">制作の流れ</a>
+    <a href="contact.html" class="nav-btn">無料相談はこちら</a>
+</div>
+<script>
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+</script>
 
 <!-- HERO -->
 <div style="padding-top:64px;">
