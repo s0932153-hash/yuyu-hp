@@ -241,14 +241,64 @@
   @media (max-width: 768px) {
     nav { padding: 14px 20px; }
     .nav-right a:not(.nav-btn) { display: none; }
+    .nav-btn { display: none !important; }
     .hero { grid-template-columns: 1fr; padding: 88px 24px 56px; gap: 28px; }
     .hero-photo { display: none; }
     .hero h1 { font-size: 24px; }
     .sec-white, .sec-blue, .cta-wrap { padding: 56px 24px; }
     .worries-grid, .svc-grid, .str-grid, .about-grid { grid-template-columns: 1fr; }
     .about-photo { display: none; }
-    .pyramid-svg-wrap { width: 270px; }
+    .pyramid-svg-wrap { width: 100%; }
+
+    .hamburger {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #1a1a2e;
+      border-radius: 2px;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 56px; left: 0; right: 0;
+      background: #fff;
+      border-bottom: 1px solid #e8eaf0;
+      padding: 16px 24px;
+      z-index: 99;
+      flex-direction: column;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      text-decoration: none;
+      color: #555;
+      font-size: 15px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: block;
+    }
+    .mobile-menu a.nav-btn {
+      display: block !important;
+      background: #3b5cf0;
+      color: white !important;
+      text-align: center;
+      border-radius: 4px;
+      padding: 14px !important;
+      margin-top: 12px;
+      border-bottom: none;
+    }
   }
+  .hamburger { display: none; }
+  .mobile-menu { display: none; }
 </style>
 </head>
 <body>
